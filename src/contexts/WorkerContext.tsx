@@ -1,6 +1,6 @@
 import React, { useReducer, createContext, ReactNode } from "react";
 import workerReducer from "../state/reducers/workerReducer";
-import { WorkerContextInterface,Worker } from "../types/contexts/worker";
+import { WorkerContextInterface, Worker } from "../types/contexts/worker";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
