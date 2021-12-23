@@ -9,6 +9,31 @@
   max-width: 1200px;
 }
 
+.default--button {
+  vertical-align: bottom;
+  cursor: pointer;
+  border: none;
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  border-radius: var(--radius);
+  font-family: var(--font-title);
+  font-size: inherit;
+  text-decoration: none;
+  padding: .5em 0;
+}
+.default--button:hover,
+.default--button:focus {
+  opacity: 0.75;
+}
+
+/*
+main section
+*/
+main {
+  padding: 3em 0;
+  background-color: var(--clr-primary);
+}
+
 
 /* 
 Screens 700px+
