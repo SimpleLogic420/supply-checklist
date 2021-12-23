@@ -1,0 +1,6 @@
+
+const ADD_WORKER = 'ADD_WORKER';
+const REMOVE_WORKER = 'REMOVE_WORKER';
+
+
+export {  ADD_WORKER, REMOVE_WORKER };
