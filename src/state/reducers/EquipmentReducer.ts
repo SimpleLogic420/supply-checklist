@@ -1,5 +1,6 @@
 import {
   ADD_EQUIPMENT,
+  REMOVE_ALL_USER_EQUIPMENTS,
   REMOVE_EQUIPMENT,
   UPDATE_EQUIPMENT,
 } from '../actions/equipmentActions';
@@ -21,6 +22,12 @@ function EquipmentReducer(state: Equipment[], action: Action) {
         action.payload.updateQuantity || equipment.currentQuantity;
       state[index] = { ...equipment };
       return [...state];
+    case REMOVE_ALL_USER_EQUIPMENTS:
+      return [
+        ...state.filter(
+          (equip) => equip.insertedBy !== action.payload.worker?.name
+        ),
+      ];
     default:
       return state;
   }

@@ -1,4 +1,5 @@
 import { Dispatch } from 'react';
+import { Worker } from './worker';
 
 export interface Equipment {
   name: string;
@@ -10,7 +11,7 @@ export interface Equipment {
 
 export interface Action {
   type: string;
-  payload: { equipment: Equipment; updateQuantity?: number };
+  payload: { equipment: Equipment; updateQuantity?: number; worker?: Worker };
 }
 
 export interface EquipmentContextInterface {

@@ -13,9 +13,10 @@ import AddEquipment from './AddEquipment';
 import '../../assets/styles/equipments-list.scss';
 import WorkerContext from '../../contexts/WorkerContext';
 import { useNavigate } from 'react-router';
+import { REMOVE_ALL_USER_EQUIPMENTS } from '../../state/actions/equipmentActions';
 
 const EquipmentsList = () => {
-  const { state } = useContext(EquipmentContext);
+  const { state, dispatch } = useContext(EquipmentContext);
   const { state: workerState } = useContext(WorkerContext);
 
   const navigate = useNavigate();
@@ -47,6 +48,16 @@ const EquipmentsList = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      <button
+        onClick={() => {
+          dispatch({
+            type: REMOVE_ALL_USER_EQUIPMENTS,
+            payload: { equipment: state[0], worker: workerState },
+          });
+        }}
+      >
+        Remove All
+      </button>
       <AddEquipment />
     </div>
   );
