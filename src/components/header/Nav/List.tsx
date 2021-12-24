@@ -5,7 +5,7 @@ function List() {
   return (
     <ul className="nav__list row">
       <Item linkName="Home" link="/" />
-      <Item linkName="About" link="/about" key="about" />
+      <Item linkName="Equipments" link="/equipments" key="equipments" />
       <Item linkName="Login" link="/login" key="login" />
       <Item linkName="Sign Up" link="/sign-up" key="sign-up" />
     </ul>

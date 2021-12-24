@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { FormElementType } from "../../types/form";
-import InvalidMessage from "./InvalidMessage";
+import { FormElementType } from '../../types/form';
+import InvalidMessage from './InvalidMessage';
 
-function FormElement({ labelValue, type, id, placeholder, state, setState, handleBlur }: FormElementType) {
+function FormElement({
+  labelValue,
+  type,
+  id,
+  placeholder,
+  state,
+  setState,
+  handleBlur,
+}: FormElementType) {
   const [error, setError] = useState('');
   return (
     <div className="form-element">
@@ -13,8 +21,10 @@ function FormElement({ labelValue, type, id, placeholder, state, setState, handl
         type={type}
         placeholder={placeholder}
         value={state}
-        onChange={e => setState(e.target.value)}
-        onBlur={e => handleBlur(e, setError)}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        onChange={(e) => setState(e.target.value)}
+        onBlur={(e) => handleBlur(e, setError)}
       />
       <InvalidMessage id={`${id}-invalid-message`} value={error} />
     </div>
