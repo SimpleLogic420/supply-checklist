@@ -1,6 +1,8 @@
 {
   "name": "reducer-context-template",
   "version": "0.1.0",
+  "homepage": "http://SimpleLogic420.github.io/supply-checklist",
+
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -28,7 +30,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/validator": "^13.7.0"
+    "@types/validator": "^13.7.0",
+    "gh-pages": "^3.2.3"
   }
 }

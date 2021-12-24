@@ -20,7 +20,7 @@ function App() {
             <Header />
             <main>
               <Routes>
-                <Route path="/" element={<AddWorker />} />
+                <Route path="/supply-checklist/" element={<AddWorker />} />
                 <Route path="/equipments" element={<EquipmentsList />} />
               </Routes>
             </main>

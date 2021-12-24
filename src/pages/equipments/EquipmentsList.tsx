@@ -23,7 +23,7 @@ const EquipmentsList = () => {
 
   useEffect(() => {
     if (workerState.name === '') {
-      navigate('/');
+      navigate('/supply-checklist/');
     }
   }, []);
 
