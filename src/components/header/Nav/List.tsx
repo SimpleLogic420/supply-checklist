@@ -4,10 +4,9 @@ import Item from './Item';
 function List() {
   return (
     <ul className="nav__list row">
-      <Item linkName="Home" link="/" />
+      <Item linkName="Home" link="/supply-checklist/" />
       <Item linkName="Equipments" link="/equipments" key="equipments" />
-      <Item linkName="Login" link="/login" key="login" />
-      <Item linkName="Sign Up" link="/sign-up" key="sign-up" />
+    
     </ul>
   );
 }
