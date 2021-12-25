@@ -22,6 +22,7 @@ const AddWorker = () => {
   const [date, setDate] = useState('');
   const { dispatch } = useContext(WorkerContext);
   const [signature,setSignature]=useState("");
+  const [signatureList,setSignatureList]=useState([]);
  // eslint-disable-next-line prefer-const
 //  let signRef=useRef({});
  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
@@ -105,6 +106,10 @@ const AddWorker = () => {
    const tool=await signCanvas.current.toDataURL();
    const toolStr=tool.toString();
    setSignature(toolStr);
+   const workerList=signatureList
+   const obj={key:name,signature:tool}
+workerList.push()
+  //  setSignatureList()
    console.log(tool);
    
    
