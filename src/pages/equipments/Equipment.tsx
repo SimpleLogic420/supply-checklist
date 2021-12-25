@@ -36,7 +36,7 @@ const Equipment = ({
       <TableCell align="right">
         <input
           id={`${equipment.id}-input`}
-          type={'number'}
+           type={'number'}
           defaultValue={equipment.currentQuantity}
           min={0}
           max={equipment.fullQuantity}
