@@ -22,7 +22,7 @@ const AddWorker = () => {
   const [date, setDate] = useState('');
   const { dispatch } = useContext(WorkerContext);
   const [signature,setSignature]=useState("");
-  const [signatureList,setSignatureList]=useState([]);
+  // const [signatureList,setSignatureList]=useState([]);
  // eslint-disable-next-line prefer-const
 //  let signRef=useRef({});
  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
@@ -104,13 +104,13 @@ const AddWorker = () => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
    const tool=await signCanvas.current.toDataURL();
-   const toolStr=tool.toString();
+   const toolStr=JSON.stringify({worker:name,signature:tool.toString()});
    setSignature(toolStr);
-   const workerList=signatureList
-   const obj={key:name,signature:tool}
-workerList.push()
+  //  const workerList=signatureList
+  //  const obj={key:name,signature:tool}
+// workerList.push()
   //  setSignatureList()
-   console.log(tool);
+   console.log(toolStr);
    
    
     
@@ -123,8 +123,10 @@ workerList.push()
     formElements={formElements}
     submitValue="Worker Login"
     handleSubmit={handleSubmit}
+    
   />
-  <p><small>Sign Here:</small></p>
+  {/* <div className='signDiv'>
+  <p><small>Sign Here To Had Signature:</small></p>
         {<SignaturePad
         
   ref={signCanvas}
@@ -133,10 +135,13 @@ workerList.push()
            backgroundColor="white"
           // canvasProps={{width: 250, height: 100,className:"signPad" }}
           />}
+          <br/>
          <button onClick={clear}>Clear</button>
          <button onClick={save}>Save</button>
 {signature!==""?<div className='showUrl'><p><code>{signature}</code></p></div>
 :""};
+  </div> */}
+  
   </div>
     
   );
